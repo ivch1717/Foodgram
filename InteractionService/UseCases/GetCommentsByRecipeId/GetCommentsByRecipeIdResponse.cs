@@ -1,0 +1,3 @@
+namespace UseCases.GetCommentsByRecipeId;
+
+public sealed record GetCommentsByRecipeIdResponse(IReadOnlyCollection<GetCommentsByRecipeIdResponseObj> Comments);
