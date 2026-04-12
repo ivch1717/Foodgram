@@ -4,7 +4,7 @@ public sealed class Comment
 {
     public Guid Id { get; }
     public Guid UserId { get; }
-    public Guid RecipetId { get; }
+    public Guid RecipeId { get; }
     public DateTime CreatedAt { get; }
     public string Text { get; }
     public Comment(Guid id, Guid userId, Guid recipetId, DateTime createdAt, string text)
@@ -30,7 +30,7 @@ public sealed class Comment
         }
         Id = id;
         UserId = userId;
-        RecipetId = recipetId;
+        RecipeId = recipetId;
         CreatedAt = createdAt;
         Text = text;
     }
