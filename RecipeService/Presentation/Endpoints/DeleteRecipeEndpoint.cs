@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using UseCases.Delete;
 
@@ -9,7 +10,7 @@ public static class DeleteRecipeEndpoint
 {
     public static RouteGroupBuilder MapDeleteRecipe(this RouteGroupBuilder group)
     {
-        group.MapDelete("", (DeleteRecipeRequest request, IDeleteRecipeRequestHandler handler) =>
+        group.MapDelete("", ([FromBody] DeleteRecipeRequest request, IDeleteRecipeRequestHandler handler) =>
         {
             try
             {

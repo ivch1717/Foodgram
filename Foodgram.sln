@@ -20,6 +20,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "RecipeServi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "InteractionService\Presentation\Presentation.csproj", "{4E7B280A-3892-409B-A6CF-D3C3433626B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "RecipeService\Host\Host.csproj", "{14DF8C35-1195-4AA0-89E6-301EAD3F8937}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5E4527B8-47C5-4B13-8F9A-F8823815D217}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,5 +73,9 @@ Global
 		{4E7B280A-3892-409B-A6CF-D3C3433626B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E7B280A-3892-409B-A6CF-D3C3433626B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E7B280A-3892-409B-A6CF-D3C3433626B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14DF8C35-1195-4AA0-89E6-301EAD3F8937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14DF8C35-1195-4AA0-89E6-301EAD3F8937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14DF8C35-1195-4AA0-89E6-301EAD3F8937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14DF8C35-1195-4AA0-89E6-301EAD3F8937}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

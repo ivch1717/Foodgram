@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "ukMFduUyUSg=",
-  "success": false,
+  "dgSpecHash": "d9JeiGhwFlU=",
+  "success": true,
   "projectFilePath": "C:\\Users\\oryx\\RiderProjects\\Foodgram\\RecipeService\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oryx\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.4\\microsoft.entityframeworkcore.9.0.4.nupkg.sha512",
@@ -10,11 +10,11 @@
     "C:\\Users\\oryx\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.1\\microsoft.entityframeworkcore.relational.9.0.1.nupkg.sha512",
     "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.4\\microsoft.extensions.caching.abstractions.9.0.4.nupkg.sha512",
     "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.4\\microsoft.extensions.caching.memory.9.0.4.nupkg.sha512",
-    "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.4\\microsoft.extensions.configuration.9.0.4.nupkg.sha512",
+    "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.5\\microsoft.extensions.configuration.10.0.5.nupkg.sha512",
     "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.5\\microsoft.extensions.configuration.abstractions.10.0.5.nupkg.sha512",
     "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.configuration.environmentvariables\\10.0.5\\microsoft.extensions.configuration.environmentvariables.10.0.5.nupkg.sha512",
     "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\10.0.5\\microsoft.extensions.configuration.fileextensions.10.0.5.nupkg.sha512",
-    "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.configuration.json\\9.0.4\\microsoft.extensions.configuration.json.9.0.4.nupkg.sha512",
+    "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.configuration.json\\10.0.5\\microsoft.extensions.configuration.json.10.0.5.nupkg.sha512",
     "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.4\\microsoft.extensions.dependencyinjection.9.0.4.nupkg.sha512",
     "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.4\\microsoft.extensions.dependencyinjection.abstractions.9.0.4.nupkg.sha512",
     "C:\\Users\\oryx\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\9.0.0\\microsoft.extensions.diagnostics.abstractions.9.0.0.nupkg.sha512",
@@ -29,17 +29,5 @@
     "C:\\Users\\oryx\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
     "C:\\Users\\oryx\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.4\\npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: Microsoft.Extensions.Configuration from 10.0.5 to 9.0.4. Reference the package directly from the project to select a different version. \r\n Infrastructure -> Microsoft.Extensions.Configuration.FileExtensions 10.0.5 -> Microsoft.Extensions.Configuration (>= 10.0.5) \r\n Infrastructure -> Microsoft.Extensions.Configuration (>= 9.0.4)",
-      "projectPath": "C:\\Users\\oryx\\RiderProjects\\Foodgram\\RecipeService\\Infrastructure\\Infrastructure.csproj",
-      "filePath": "C:\\Users\\oryx\\RiderProjects\\Foodgram\\RecipeService\\Infrastructure\\Infrastructure.csproj",
-      "libraryId": "Microsoft.Extensions.Configuration",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  "logs": []
 }

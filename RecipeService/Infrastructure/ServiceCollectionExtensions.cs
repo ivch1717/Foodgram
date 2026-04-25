@@ -8,12 +8,13 @@ using Infrastructure.Data.Repositories;
 using UseCases.Delete;
 using UseCases.Edit;
 using UseCases.GetRecipeById;
+using UseCases.GetRecipesByUserId;
 
 namespace Infrastructure;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddRecipesInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString =
             configuration.GetConnectionString("Default")
@@ -26,7 +27,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IDeleteRecipeRepository, DeleteRecipeRepository>();
         services.AddScoped<IEditRecipeRepository, EditRecipeRepository>();
         services.AddScoped<IGetRecipeByIdRepository, GetRecipeByIdRepository>();
-        services.AddScoped<IGetRecipeByIdRepository, GetRecipeByIdRepository>();
+        services.AddScoped<IGetRecipesByUserIdRepository, GetRecipesByUserIdRepository>();
         
         services.AddHostedService<MigrationRunner>();
         
