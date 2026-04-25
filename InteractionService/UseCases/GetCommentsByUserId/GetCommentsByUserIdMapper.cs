@@ -11,7 +11,7 @@ public static class GetCommentsByUserIdMapper
             comments.OrderByDescending(x => x.CreatedAt)
                 .Select(x => new GetCommentsByUserIdResponseObj(
                     x.Id,
-                    x.RecipetId,
+                    x.RecipeId,
                     x.UserId,
                     x.Text,
                     x.CreatedAt))

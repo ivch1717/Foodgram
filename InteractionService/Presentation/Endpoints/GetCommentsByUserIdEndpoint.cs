@@ -9,7 +9,7 @@ public static class GetCommentsByUserIdEndpoint
 {
     public static RouteGroupBuilder MapGetCommentsByUserId(this RouteGroupBuilder group)
     {
-        group.MapGet("", (Guid userId, IGetCommentsByUserIdRequestHandle handler) =>
+        group.MapGet("user/{userId:guid}", (Guid userId, IGetCommentsByUserIdRequestHandle handler) =>      
             {
                 try
                 {

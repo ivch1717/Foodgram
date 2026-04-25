@@ -27,6 +27,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose.yaml = docker-compose.yaml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "InteractionService\Host\Host.csproj", "{7BC1E9CE-1859-45D9-BF32-2D0FCA2671E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "ModerationService\Infrastructure\Infrastructure.csproj", "{0CF00505-3D74-4112-8F72-B95D7DDEDAF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "ModerationService\Presentation\Presentation.csproj", "{16CCD379-5DDC-4CE9-80C1-10EABF3865DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "ModerationService\Host\Host.csproj", "{C776F2D3-330B-4BF6-B983-8AB19FEECB15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,5 +85,21 @@ Global
 		{14DF8C35-1195-4AA0-89E6-301EAD3F8937}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14DF8C35-1195-4AA0-89E6-301EAD3F8937}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14DF8C35-1195-4AA0-89E6-301EAD3F8937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BC1E9CE-1859-45D9-BF32-2D0FCA2671E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC1E9CE-1859-45D9-BF32-2D0FCA2671E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC1E9CE-1859-45D9-BF32-2D0FCA2671E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC1E9CE-1859-45D9-BF32-2D0FCA2671E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF00505-3D74-4112-8F72-B95D7DDEDAF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF00505-3D74-4112-8F72-B95D7DDEDAF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF00505-3D74-4112-8F72-B95D7DDEDAF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF00505-3D74-4112-8F72-B95D7DDEDAF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16CCD379-5DDC-4CE9-80C1-10EABF3865DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16CCD379-5DDC-4CE9-80C1-10EABF3865DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16CCD379-5DDC-4CE9-80C1-10EABF3865DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16CCD379-5DDC-4CE9-80C1-10EABF3865DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C776F2D3-330B-4BF6-B983-8AB19FEECB15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C776F2D3-330B-4BF6-B983-8AB19FEECB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C776F2D3-330B-4BF6-B983-8AB19FEECB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C776F2D3-330B-4BF6-B983-8AB19FEECB15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

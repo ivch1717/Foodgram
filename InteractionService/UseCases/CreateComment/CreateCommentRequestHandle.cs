@@ -10,7 +10,7 @@ public class CreateCommentRequestHandle : ICreateCommentRequestHandle
     }
     public CreateCommentResponse Handle(CreateCommentRequest request)
     {
-        var comment = CreateCommentMapper.ToEntities(request, new Guid());
+        var comment = CreateCommentMapper.ToEntities(request, Guid.NewGuid());
         _repository.AddComment(comment);
         return new CreateCommentResponse(comment.Id);
     }

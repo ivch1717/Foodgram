@@ -9,7 +9,7 @@ public static class GetLikesByUserIdEndpoint
 {
     public static RouteGroupBuilder MapGetLikesByUserId(this RouteGroupBuilder group)
     {
-        group.MapGet("", (Guid userId, IGetLikesByUserIdRequestHandle handler) =>
+        group.MapGet("user/{userId:guid}", (Guid userId, IGetLikesByUserIdRequestHandle handler) =>
             {
                 try
                 {

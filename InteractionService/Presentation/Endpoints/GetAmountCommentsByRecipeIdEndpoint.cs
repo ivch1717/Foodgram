@@ -9,7 +9,7 @@ public static class GetAmountCommentsByRecipeIdEndpoint
 {
     public static RouteGroupBuilder MapGetAmountCommentsByRecipeId(this RouteGroupBuilder group)
     {
-        group.MapGet("", (Guid recipeId, IGetAmountCommentsByRecipeIdRequestHandle handler) =>
+        group.MapGet("recipe/{recipeId:guid}/amount", (Guid recipeId, IGetAmountCommentsByRecipeIdRequestHandle handler) =>
             {
                 try
                 {

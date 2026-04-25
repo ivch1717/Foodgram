@@ -27,6 +27,35 @@
     restart: unless-stopped
     ports:
       - "7200:8080"
+      
+  interacion-service:
+    build:
+      context: .
+      dockerfile: InteractionService/Host/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Default: Host=postgres;Port=5432;Database=interactions;Username=postgres;Password=postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+    ports:
+      - "7201:8080"
+      
+      
+  moderation-service:
+    build:
+      context: .
+      dockerfile: ModerationService/Host/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Default: Host=postgres;Port=5432;Database=reports;Username=postgres;Password=postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+    ports:
+      - "7203:8080"
         
 volumes:
   pgdata:

@@ -9,7 +9,7 @@ public static class IsRecipeLikedEndpoint
 {
     public static RouteGroupBuilder MapIsRecipeLiked(this RouteGroupBuilder group)
     {
-        group.MapGet("", (Guid recipeId, Guid userId, IIsRecipeLikedRequestHandle handler) =>
+        group.MapGet("recipe/{recipeId:guid}/user/{userId:guid}", (Guid recipeId, Guid userId, IIsRecipeLikedRequestHandle handler) =>
             {
                 try
                 {

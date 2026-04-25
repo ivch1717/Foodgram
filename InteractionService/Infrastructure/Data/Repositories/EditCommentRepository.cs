@@ -1,6 +1,7 @@
 ﻿using Entities;
 using Infrastructure.Data.Db;
 using Infrastructure.Data.Mappers;
+using Microsoft.EntityFrameworkCore;
 using UseCases.EditComment;
 
 namespace Infrastructure.Data.Repositories;
@@ -10,6 +11,7 @@ internal sealed class EditCommentRepository(InteractionServiceDbContext db) : IE
     public Comment? GetComment(Guid commentId)
     {
         return db.Comments
+            .AsNoTracking()
             .FirstOrDefault(x => x.Id == commentId)?
             .ToEntity();
     }

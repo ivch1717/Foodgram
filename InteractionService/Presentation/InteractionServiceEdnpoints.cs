@@ -5,7 +5,7 @@ namespace Presentation;
 
 public static class InteractionServiceEndpoints
 {
-    public static WebApplication MapWebApplication(this WebApplication app)
+    public static WebApplication MapInteractionsEndpoints(this WebApplication app)
     {
         app.MapGroup("/likes")
             .WithTags("Likes")

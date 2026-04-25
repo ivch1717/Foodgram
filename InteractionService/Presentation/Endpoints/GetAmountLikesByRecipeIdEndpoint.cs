@@ -9,7 +9,7 @@ public static class GetAmountLikesByRecipeIdEndpoint
 {
     public static RouteGroupBuilder MapGetAmountLikesByRecipeId(this RouteGroupBuilder group)
     {
-        group.MapGet("", (Guid recipeId, IGetAmountLikesByRecipeIdRequestHandle handler) =>
+        group.MapGet("recipe/{recipeId:guid}/amount", (Guid recipeId, IGetAmountLikesByRecipeIdRequestHandle handler) =>
             {
                 try
                 {
