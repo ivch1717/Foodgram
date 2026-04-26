@@ -11,6 +11,7 @@ internal sealed class GetRecipesByUserIdRepository(RecipeServiceDbContext db) : 
     {
         return db.Recipes
             .Where(x => x.UserId == userId)
+            .OrderByDescending(x => x.DateCreated)
             .Select(x => x.ToEntity())
             .ToList();
     }

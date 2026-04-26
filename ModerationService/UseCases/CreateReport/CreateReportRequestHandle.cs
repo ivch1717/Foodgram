@@ -5,11 +5,14 @@ namespace UseCases.CreateReport;
 public class CreateReportRequestHandle : ICreateReportRequestHandle
 {
     IReportRepository _reportRepository;
-    IDeleteRepository _deleteRepository;
-    public CreateReportRequestHandle(IReportRepository reportRepository, IDeleteRepository deleteRepository)
+    IDeleteCommentRepository _deleteCommentRepository;
+    IDeleteRecipeRepository _deleteRecipeRepository;
+    public CreateReportRequestHandle(IReportRepository reportRepository, IDeleteCommentRepository deleteCommentRepository, 
+        IDeleteRecipeRepository deleteRecipeRepository)
     {
         _reportRepository = reportRepository;
-        _deleteRepository = deleteRepository;
+        _deleteCommentRepository = deleteCommentRepository;
+        _deleteRecipeRepository = deleteRecipeRepository;
     }
 
     public CreateReportResponse Handle(CreateReportRequest request)
@@ -20,7 +23,7 @@ public class CreateReportRequestHandle : ICreateReportRequestHandle
         }
         Report report = CreateReportMapper.ToEntitiy(request, Guid.NewGuid());
         _reportRepository.AddReport(report);
-        if (_reportRepository.GetAmountReports(request.TargetId, request.Type) < 100)
+        if (_reportRepository.GetAmountReports(request.TargetId, request.Type) < 2)
         {
             return new CreateReportResponse($"Жалоба номер: {report.Id} обработана.");
         }
@@ -28,12 +31,12 @@ public class CreateReportRequestHandle : ICreateReportRequestHandle
         {
             if (request.Type == TargetType.Comment)
             {
-                _deleteRepository.DeleteComment(request.TargetId);
+                _deleteCommentRepository.DeleteComment(request.TargetId, request.OwnerUserId);
                 return new CreateReportResponse($"Жалоба номер: {report.Id} обработана. Комментарий был удален");
             }
             else
             {
-                _deleteRepository.DeleteRecipe(request.TargetId);
+                _deleteRecipeRepository.DeleteRecipe(request.TargetId, request.OwnerUserId);
                 return new CreateReportResponse($"Жалоба номер: {report.Id} обработана. Рецепт был удален.");
             }
         }

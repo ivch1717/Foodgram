@@ -9,7 +9,7 @@ public static class CreateReportEndpoint
 {
     public static RouteGroupBuilder MapCreateReport(this RouteGroupBuilder group)
     {
-        group.MapPost("", (CreateReportRequest request, CreateReportRequestHandle handler) =>
+        group.MapPost("", (CreateReportRequest request, ICreateReportRequestHandle handler) =>
         {
             try
             {

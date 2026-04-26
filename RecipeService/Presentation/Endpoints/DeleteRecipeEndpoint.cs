@@ -10,10 +10,15 @@ public static class DeleteRecipeEndpoint
 {
     public static RouteGroupBuilder MapDeleteRecipe(this RouteGroupBuilder group)
     {
-        group.MapDelete("", ([FromBody] DeleteRecipeRequest request, IDeleteRecipeRequestHandler handler) =>
+        group.MapDelete("/{recipeId:guid}/users/{userId:guid}", (
+                Guid recipeId,
+                Guid userId,
+                IDeleteRecipeRequestHandler handler) =>
         {
             try
             {
+                var request = new DeleteRecipeRequest(recipeId, userId);
+                
                 var response = handler.Handle(request);
                 return Results.Ok(response);
             }

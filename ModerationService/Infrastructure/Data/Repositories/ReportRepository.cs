@@ -15,7 +15,7 @@ public class ReportRepository(ModerationServiceDbContext db) : IReportRepository
 
     public int GetAmountReports(Guid id, TargetType targetType)
     {
-        return db.Reports.Count(x => x.Id == id && x.TargetType == (int)targetType);
+        return db.Reports.Count(x => x.TargetId == id && x.TargetType == (int)targetType);
     }
 
     public Report? GetReport(Guid targetId, TargetType targetType, Guid userId)

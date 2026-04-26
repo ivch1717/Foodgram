@@ -9,7 +9,7 @@ public static class CheckContentForModerationEndpoint
 {
     public static RouteGroupBuilder MapCheckContentForModeration(this RouteGroupBuilder group)
     {
-        group.MapPost("/content", (CheckContentForModerationRequest request, CheckContentForModerationRequestHandle handler) =>
+        group.MapPost("/content", (CheckContentForModerationRequest request, ICheckContentForModerationRequestHandle handler) =>
             {
                 try
                 {

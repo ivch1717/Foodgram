@@ -28,7 +28,7 @@
     ports:
       - "7200:8080"
       
-  interacion-service:
+  interaction-service:
     build:
       context: .
       dockerfile: InteractionService/Host/Dockerfile
@@ -50,9 +50,15 @@
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__Default: Host=postgres;Port=5432;Database=reports;Username=postgres;Password=postgres
+      Services__RecipeService__BaseUrl: http://recipe-service:8080
+      Services__InteractionService__BaseUrl: http://interaction-service:8080
     depends_on:
       postgres:
         condition: service_healthy
+      recipe-service:
+        condition: service_started
+      interaction-service:
+        condition: service_started
     restart: unless-stopped
     ports:
       - "7203:8080"

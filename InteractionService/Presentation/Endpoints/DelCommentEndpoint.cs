@@ -10,10 +10,14 @@ public static class DelCommentEndpoint
 {
     public static RouteGroupBuilder MapDelComment(this RouteGroupBuilder group)
     {
-        group.MapDelete("", ([FromBody] DelCommentRequest request, IDelCommentRequestHandle handler) =>
+        group.MapDelete("/{commentId:guid}/users/{userId:guid}", (
+                Guid commentId,
+                Guid userId,
+                IDelCommentRequestHandle handler) =>
             {
                 try
                 {
+                    var request = new DelCommentRequest(commentId, userId);
                     var response = handler.Handle(request);
                     return Results.Ok(response);
                 }

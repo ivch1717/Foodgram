@@ -2,4 +2,4 @@
 
 namespace UseCases.CheckSpam;
 
-public sealed record CheckSpamRequest(Guid TargetId, TargetType Type, string Text, DateTime CreatedAt);
+public sealed record CheckSpamRequest(Guid TargetId, TargetType Type, string Text, DateTime CreatedAt, Guid UserId);

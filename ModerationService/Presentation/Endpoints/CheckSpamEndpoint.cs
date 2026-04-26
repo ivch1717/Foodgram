@@ -9,7 +9,7 @@ public static class CheckSpamEndpoint
 {
     public static RouteGroupBuilder MapCheckSpam(this RouteGroupBuilder group)
     {
-        group.MapPost("/spam", (CheckSpamRequest request, CheckSpamRequestHandle handler) =>
+        group.MapPost("/spam", (CheckSpamRequest request, ICheckSpamRequestHandle handler) =>
             {
                 try
                 {

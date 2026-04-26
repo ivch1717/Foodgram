@@ -11,6 +11,7 @@ internal sealed class GetCommentsByUserIdRepository(InteractionServiceDbContext 
     {
         return db.Comments
             .Where(x => x.UserId == userId)
+            .OrderByDescending(x => x.CreatedAt)
             .Select(x => x.ToEntity())
             .ToList();
     }

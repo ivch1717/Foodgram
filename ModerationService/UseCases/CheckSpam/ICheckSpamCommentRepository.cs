@@ -1,7 +1,6 @@
 ﻿namespace UseCases.CheckSpam;
 
-public interface ICheckSpamRepository
+public interface ICheckSpamCommentRepository
 {
     public IReadOnlyCollection<SpamSample> GetLast5Comments(Guid id);
-    public IReadOnlyCollection<SpamSample> GetLast5Recipe(Guid id);
 }

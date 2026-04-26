@@ -4,11 +4,13 @@ namespace UseCases.CheckSpam;
 
 public class CheckSpamRequestHandle : ICheckSpamRequestHandle
 {
-    ICheckSpamRepository _checkSpamRepository;
+    ICheckSpamCommentRepository _checkSpamCommentRepository;
+    ICheckSpamRecipeRepository _checkSpamRecipeRepository;
 
-    public CheckSpamRequestHandle(ICheckSpamRepository checkSpamRepository)
+    public CheckSpamRequestHandle(ICheckSpamCommentRepository checkSpamCommentRepository,  ICheckSpamRecipeRepository checkSpamRecipeRepository)
     {
-        _checkSpamRepository = checkSpamRepository;
+        _checkSpamCommentRepository = checkSpamCommentRepository;
+        _checkSpamRecipeRepository = checkSpamRecipeRepository;
     }
     
     public CheckSpamResponse Handle(CheckSpamRequest request)
@@ -16,11 +18,11 @@ public class CheckSpamRequestHandle : ICheckSpamRequestHandle
         IReadOnlyCollection<SpamSample> lasts;
         if (request.Type == TargetType.Comment)
         {
-            lasts = _checkSpamRepository.GetLast5Comments(request.TargetId);
+            lasts = _checkSpamCommentRepository.GetLast5Comments(request.UserId);
         }
         else
         {
-            lasts = _checkSpamRepository.GetLast5Recipe(request.TargetId);
+            lasts = _checkSpamRecipeRepository.GetLast5Recipe(request.UserId);
         }
         foreach(var i in lasts)
         {
