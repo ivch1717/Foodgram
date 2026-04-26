@@ -8,7 +8,7 @@ public static class GetCommentsByRecipeIdMapper
     {
         return new GetCommentsByRecipeIdResponse(
             comments.OrderByDescending(x => x.CreatedAt)
-                .Select(x => new GetCommentsByRecipeIdResponseObj(x.Id, x.UserId, x.RecipetId, x.Text, x.CreatedAt))
+                .Select(x => new GetCommentsByRecipeIdResponseObj(x.Id, x.RecipeId, x.UserId,x.Text, x.CreatedAt))
             .ToList());
     }
 }

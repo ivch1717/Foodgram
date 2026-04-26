@@ -1,0 +1,16 @@
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\bin\Debug\net10.0\UseCases.deps.json
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\bin\Debug\net10.0\UseCases.dll
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\bin\Debug\net10.0\UseCases.pdb
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\bin\Debug\net10.0\Entities.dll
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\bin\Debug\net10.0\Entities.pdb
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\obj\Debug\net10.0\UseCases.csproj.AssemblyReference.cache
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\obj\Debug\net10.0\UseCases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\obj\Debug\net10.0\UseCases.AssemblyInfoInputs.cache
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\obj\Debug\net10.0\UseCases.AssemblyInfo.cs
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\obj\Debug\net10.0\UseCases.csproj.CoreCompileInputs.cache
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\obj\Debug\net10.0\UseCases.sourcelink.json
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\obj\Debug\net10.0\UseCases.csproj.Up2Date
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\obj\Debug\net10.0\UseCases.dll
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\obj\Debug\net10.0\refint\UseCases.dll
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\obj\Debug\net10.0\UseCases.pdb
+C:\Users\oryx\RiderProjects\Foodgram\RecipeService\UseCases\obj\Debug\net10.0\ref\UseCases.dll
